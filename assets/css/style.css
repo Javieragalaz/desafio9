@@ -4,7 +4,6 @@
     margin: 0;
     padding: 0;
     font-family: 'oswald', sans-serif;
-  
 }
 
 /*inicio del codigo barra de navegacion*/
@@ -23,7 +22,7 @@
 }
 
 .header {
-    grid-area: 'header';
+    grid-area: header;
 }
 
 .menu {
@@ -267,8 +266,10 @@ input {
         grid-template-areas:
             'header header'
             'search main'
-            'search paginacion'
             'footer footer';
+
+grid-template-columns: 1fr 3fr;
+
     }
 
     .header {
@@ -333,7 +334,6 @@ input {
         justify-content: space-evenly;
         align-items: center;
         width: 100%;
-       
     }
 
     .catalogo p {
@@ -387,40 +387,19 @@ input {
     /*inicio del codigo de la seccion main*/
 
     .main {
-        grid-area: 'main';
+   /*      grid-area: 'main';
         background-color: white;
         padding: 10px;
-      
-
-    }
-
+    display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
  
+        ; */
 
+      
+        
+        
+        
 
-    .productos {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        grid-area: 'productos';
-        width: 100%;
-        gap: 20px;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;}
-
-    /* Cards vista principal mobile*/
-
-    .card {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        border: solid 1px rgb(248, 229, 119);
-        align-items: center;
-        width: 90%;
-        padding: 10px;
-        /* width: 280px; */
-        height: auto;
     }
 
     .card h4 {
@@ -438,10 +417,38 @@ input {
         text-align: center;
     }
 
-    .card img {
+
+
+    .productos {
+  /*       display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        grid-area: 'productos';
         width: 100%;
+        gap: 20px;
+        height: auto; */
+
+     
+     
+
+    }
+
+    /* Cards vista principal mobile*/
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: solid 1px rgb(248, 229, 119);
+        align-items: center;
+        width: 90%;
+        padding: 10px;
+        /* width: 280px; */
         height: auto;
     }
+
 
     /* tarjeta resto de cards*/
 
@@ -458,27 +465,15 @@ input {
         height: auto;
     }
 
-    .card_1 h4 {
-        margin: 0;
-        padding-top: 10px;
-        color: rgb(247, 126, 216);
-        font-size: x-large;
-
-    }
-
-    .card_1 p {
-        justify-content: center;
-        font-family: 'roboto condensed', sans-serif;
-        padding: 3%;
-        text-align: center;
-    }
-
-    .card_1 img {
+    .card img {
         width: 100%;
         height: auto;
     }
 
- 
+    .card_1 img{
+        width: 100%;
+        height: auto;
+    }
 
     input {
         color: white;
@@ -503,7 +498,6 @@ input {
 
     /* Paginación */
     .paginacion {
-        grid-area: 'paginacion';
         display: flex;
         justify-content: center;
         width: 100%;
@@ -516,6 +510,7 @@ input {
         padding: 0;
         margin: 24px 0;
         list-style: none;
+        grid-area: 'pagination';
     }
 
     .pagination .page-item {}
